@@ -35,3 +35,18 @@ export const even = () => {
   }
   return console.log(`Congratulations, ${PlayerName}!`);
 };
+var a = 2154; //Первое число
+var b = 435;  //Второе число 
+var gcd;
+while (a!=b) {
+  if (a>b) {
+    a = a -b;
+  }
+  else {
+    b = b - a;
+  }
+}
+gcd = a;
+console.log(gcd);
+a 1719  1284 849 414 / 393 372 351 330 309 288 267 246  225  204  183  162 141  120  99  78 57 36 15/ 9 3 
+b 21 6 3 
