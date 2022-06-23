@@ -18,7 +18,7 @@ export const even = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const UserNumber = getRandomInt(100);
-    console.log('Question: ', UserNumber);
+    console.log('Question:', UserNumber);
     const answerUser = readlineSync.question('Your answer: ');
     const option1 = (UserNumber % 2 === 0) && (answerUser === 'yes');
     const option2 = (UserNumber % 2 !== 0) && (answerUser === 'no');
