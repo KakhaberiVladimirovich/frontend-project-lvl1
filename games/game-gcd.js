@@ -2,7 +2,7 @@ import basisOfGames from '../src/index.js';
 import getRandomIn from '../src/random.js';
 
 const gcdt = (randomNamber1, randomNamber2) => {
-  let result = '';
+  let resultS = '';
   let rand1 = randomNamber1;
   let rand2 = randomNamber2;
 
@@ -13,8 +13,8 @@ const gcdt = (randomNamber1, randomNamber2) => {
       rand2 -= rand1;
     }
   }
-  result = rand1;
-  return result;
+  resultS = rand1;
+  return resultS;
 };
 
 const gcd = () => {
@@ -24,8 +24,8 @@ const gcd = () => {
     const random1 = getRandomIn(100);
     const random2 = getRandomIn(100);
     const expression = `${random1} ${random2}`;
-
-    return [expression, gcdt(random1, random2)];
+    const result = gcdt(random1, random2);
+    return [expression, result];
   };
   basisOfGames(noteToGame, gcd1);
 };
