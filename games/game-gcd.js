@@ -4,7 +4,7 @@ import getRandomIn from '../src/random.js';
 const gcd = () => {
   const noteToGame = 'Find the greatest common divisor of given numbers.';
 
-  const taskcalc = () => {
+  const gcd1 = () => {
     const random1 = getRandomIn(100);
     const random2 = getRandomIn(100);
     const expression = `${random1} ${random2}`;
@@ -22,7 +22,7 @@ const gcd = () => {
     result = Number1;
     return [expression, result];
   };
-  basisOfGames(noteToGame, taskcalc);
+  basisOfGames(noteToGame, gcd1);
 };
 
 export default gcd;
