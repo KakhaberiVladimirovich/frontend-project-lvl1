@@ -1,23 +1,24 @@
 import basisOfGames from '../src/index.js';
 import getRandomIn from '../src/random.js';
 
+const primeNamb = (random) => {
+  let rool = true;
+  for (let i = 2; i < random; i += 1) {
+    if (random % i === 0) {
+      rool = false;
+      break;
+    }
+  }
+  return rool;
+};
 const prime = () => {
   const noteToGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const primeNumber = () => {
-    const randomnumber = getRandomIn(100);
+    const randomnumber = getRandomIn(10);
 
-    const num = randomnumber;
-
-    let rool = true;
-    for (let i = 2; i < num; i += 1) {
-      if (num % i === 0) {
-        rool = false;
-        break;
-      }
-    }
     let result = '';
-    if (rool === true) {
+    if (primeNamb(randomnumber) === true) {
       result = 'yes';
     } else {
       result = 'no';
