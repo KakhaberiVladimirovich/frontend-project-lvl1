@@ -5,9 +5,7 @@ const primeNamb = (random) => {
   let rool = true;
   if (random === 1) {
     rool = true;
-  } else if (random === 0) {
-    rool = false;
-  } else if (random === 2) {
+  } else if (random === 0 || random === 2 || random === 1) {
     rool = false;
   } else {
     for (let i = 2; i < random; i += 1) {
