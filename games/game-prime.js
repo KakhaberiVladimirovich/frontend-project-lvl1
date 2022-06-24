@@ -3,8 +3,12 @@ import getRandomIn from '../src/random.js';
 
 const primeNamb = (random) => {
   let rool = true;
-  if (random === 1 || random === 0) {
+  if (random === 1) {
     rool = true;
+  } else if (random === 0) {
+    rool = false;
+  } else if (random === 2) {
+    rool = false;
   } else {
     for (let i = 2; i < random; i += 1) {
       if (random % i === 0) {
