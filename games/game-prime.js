@@ -1,7 +1,7 @@
 import basisOfGames from '../src/index.js';
 import getRandomIn from '../src/random.js';
 
-const primeNamb = (random) => {
+const GetgeneralFormulaPrime = (random) => {
   let rool = true;
   if (random === 0 || random === 2 || random === 1) {
     rool = false;
@@ -15,21 +15,21 @@ const primeNamb = (random) => {
   }
   return rool;
 };
-const prime = () => {
+const Getprime = () => {
   const noteToGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const primeNumber = () => {
+  const isPrime = () => {
     const randomnumber = getRandomIn(10);
 
     let result = '';
-    if (primeNamb(randomnumber) === true) {
+    if (GetgeneralFormulaPrime(randomnumber) === true) {
       result = 'yes';
     } else {
       result = 'no';
     }
     return [randomnumber, result];
   };
-  basisOfGames(noteToGame, primeNumber);
+  basisOfGames(noteToGame, isPrime);
 };
 
-export default prime;
+export default Getprime;
