@@ -5,3 +5,4 @@ https://asciinema.org/a/2L8kqMoh645B2wFWNsPSbu40u
 https://asciinema.org/a/V5zRJNJacEuwolCa27rhbRWPO
 https://asciinema.org/a/njrqMojh01wtEJ7ywFiqcKfP9
 https://asciinema.org/a/RqTJELYYGVenPgowiavyyL82G
+<a href="https://codeclimate.com/github/Kachabery/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/7c1a84c6c911e949c857/maintainability" /></a>
