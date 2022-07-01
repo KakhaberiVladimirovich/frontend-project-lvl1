@@ -6,7 +6,7 @@ const GetgeneralFormulaPrime = (random) => {
   if (random === 0 || random === 2 || random === 1) {
     rool = false;
   } else {
-    for (let i = 2; i < random; i += 1) {
+    for (let i = 3; i < random; i += 1) {
       if (random % i === 0) {
         rool = false;
         break;
