@@ -2,11 +2,43 @@
 [![Actions Status](https://github.com/Kachabery/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Kachabery/frontend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/Kachabery/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/7c1a84c6c911e949c857/maintainability" /></a>
 
-## Setup	
+## О проекте	
+
+<p>Проект представляет собой серию из 4 числовых игр, в каждой из которых находится 3 задания, в них вам придстоит: </p>
+<ol>
+  <li>Проверить число на четность
+    <ul>
+      <li>Запуск осуществляется командой "make brain-even.js"</li>
+    </ul>
+  </li>
+  <li>Складывать, умножать и вычитать
+    <ul>
+      <li>Запуск осуществляется командой "make brain-calc.js"</li>
+    </ul>
+  </li>
+  <li>Найти наибольший общий делитель
+    <ul>
+      <li>Запуск осуществляется командой "make brain-gcd.js"</li>
+    </ul>
+  </li>
+  <li>Подставить нужное число в арифметическую прогрессию
+    <ul>
+      <li>Запуск осуществляется командой "make brain-progression.js"</li>
+    </ul>
+  </li>
+  <li>Ответить на вопрос, простое ли число, находится перед вами
+  <ul>
+      <li>Запуск осуществляется командой "make brain-prime.js"</li>
+    </ul>
+  </li>
+
+</ol>
+
+## установка
 
 <p>make install</p>
 
-## Run tests	
+## Запустить тест	
 
 <p>make test</p>
 
