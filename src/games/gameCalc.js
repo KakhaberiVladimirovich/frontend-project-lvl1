@@ -1,5 +1,5 @@
-import basisOfGames from '../src/index.js';
-import getRandomIn from '../src/random.js';
+import basisOfGames from '../index.js';
+import getRandomIn from '../random.js';
 
 // noteToGameCalc(Вопрос задачи),  taskCalc(вопрос, Решение)(решение задачи), Random1/Random2
 

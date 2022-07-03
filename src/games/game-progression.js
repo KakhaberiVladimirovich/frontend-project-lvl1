@@ -1,5 +1,5 @@
-import basisOfGames from '../src/index.js';
-import getRandomIn from '../src/random.js';
+import basisOfGames from '../index.js';
+import getRandomIn from '../random.js';
 
 const GetgeneralFormulaProgression = (randomNamber1, randomNamber2, long) => {
   const consistency = [randomNamber1];

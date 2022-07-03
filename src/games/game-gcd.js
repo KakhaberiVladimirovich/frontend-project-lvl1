@@ -1,5 +1,5 @@
-import basisOfGames from '../src/index.js';
-import getRandomIn from '../src/random.js';
+import basisOfGames from '../index.js';
+import getRandomIn from '../random.js';
 
 const GetgeneralFormulaGcd = (randomNamber1, randomNamber2) => {
   let resultS = '';

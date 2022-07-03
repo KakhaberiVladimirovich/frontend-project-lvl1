@@ -1,12 +1,12 @@
-import basisOfGames from '../src/index.js';
-import getRandomIn from '../src/random.js';
+import basisOfGames from '../index.js';
+import getRandomIn from '../random.js';
 
 const GetgeneralFormulaPrime = (random) => {
   let rool = true;
   if (random === 0 || random === 2 || random === 1) {
     rool = false;
   } else {
-    for (let i = 3; i < random; i += 1) {
+    for (let i = 2; i < random; i += 1) {
       if (random % i === 0) {
         rool = false;
         break;

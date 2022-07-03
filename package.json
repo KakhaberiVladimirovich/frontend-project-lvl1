@@ -2,8 +2,8 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Kachabery/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Kachabery/frontend-project-lvl1/actions)",
-  "main": "index.js",
+  "description": "The project is a collection of 5 numerical games",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,17 +11,14 @@
     "type": "git",
     "url": "git@Tray2:Kachabery/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Kahabery",
   "license": "ISC",
   "dependencies": {
-    "ci": "^2.2.0",
-    "make": "^0.8.1",
     "readline-sync": "^1.4.10"
   },
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-even2": "bin/brain-even2.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-progression": "bin/brain-progression.js",
