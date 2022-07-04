@@ -42,8 +42,7 @@
 
 <p>make test</p>
 
-
-
+## Визуализация игр	
 
 <a href="https://asciinema.org/a/e5cHzoQDCPQpxop3szw4hR8Lv?autoplay=1"><img src="https://asciinema.org/a/e5cHzoQDCPQpxop3szw4hR8Lv.png" width="836"/></a>
 <a href="https://asciinema.org/a/2L8kqMoh645B2wFWNsPSbu40u"><img src="https://asciinema.org/a/2L8kqMoh645B2wFWNsPSbu40u.png" width="836"/></a>
