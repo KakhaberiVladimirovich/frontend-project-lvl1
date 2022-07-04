@@ -6,7 +6,7 @@ const getName = () => readlineSync.question('May I have your name? ');
 
 // Определение функции приветствия
 const PlayerName = getName();
-export const greeting = () => {
+export const getGreeting = () => {
   console.log(`Hello, ${PlayerName}!`);
 };
 
@@ -14,7 +14,7 @@ export const greeting = () => {
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 // функция определения четности числа и спопоставления с ответом пользователя.
-export const even = () => {
+export const startGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const UserNumber = getRandomInt(100);

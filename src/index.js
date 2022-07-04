@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const basisOfGames = (noteToGame, task) => {
+const getBasisOfGames = (noteToGame, task) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name? ');
@@ -29,4 +29,4 @@ const basisOfGames = (noteToGame, task) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default basisOfGames;
+export default getBasisOfGames;

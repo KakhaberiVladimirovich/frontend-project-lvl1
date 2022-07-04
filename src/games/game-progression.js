@@ -1,7 +1,7 @@
-import basisOfGames from '../index.js';
+import getBasisOfGames from '../index.js';
 import getRandomIn from '../random.js';
 
-const GetgeneralFormulaProgression = (randomNamber1, randomNamber2, long) => {
+const getTaskcalc = (randomNamber1, randomNamber2, long) => {
   const consistency = [randomNamber1];
   let nextNumber = randomNamber1;
   for (let i = 0; i <= long; i += 1) {
@@ -13,17 +13,17 @@ const GetgeneralFormulaProgression = (randomNamber1, randomNamber2, long) => {
   return [str, resultt];
 };
 
-const GetArithmeticProgression = () => {
+const startGame = () => {
   const noteToGame = 'What number is missing in the progression?';
 
-  const GetRandomProgression = () => {
+  const substituteARandomNumber = () => {
     const random1 = getRandomIn(10);
     const random2 = getRandomIn(10);
 
-    return GetgeneralFormulaProgression(random1, random2, 10);
+    return getTaskcalc(random1, random2, 10);
   };
 
-  basisOfGames(noteToGame, GetRandomProgression);
+  getBasisOfGames(noteToGame, substituteARandomNumber);
 };
 
-export default GetArithmeticProgression;
+export default startGame;

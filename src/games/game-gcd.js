@@ -1,7 +1,7 @@
-import basisOfGames from '../index.js';
+import getBasisOfGames from '../index.js';
 import getRandomIn from '../random.js';
 
-const GetgeneralFormulaGcd = (randomNamber1, randomNamber2) => {
+const getTaskcalc = (randomNamber1, randomNamber2) => {
   let resultS = '';
   let rand1 = randomNamber1;
   let rand2 = randomNamber2;
@@ -17,17 +17,17 @@ const GetgeneralFormulaGcd = (randomNamber1, randomNamber2) => {
   return resultS;
 };
 
-const GetGcd = () => {
+const startGame = () => {
   const noteToGame = 'Find the greatest common divisor of given numbers.';
 
-  const GetRandomGcd = () => {
+  const substituteARandomNumber = () => {
     const random1 = getRandomIn(100);
     const random2 = getRandomIn(100);
     const expression = `${random1} ${random2}`;
-    const result = GetgeneralFormulaGcd(random1, random2);
+    const result = getTaskcalc(random1, random2);
     return [expression, result];
   };
-  basisOfGames(noteToGame, GetRandomGcd);
+  getBasisOfGames(noteToGame, substituteARandomNumber);
 };
 
-export default GetGcd;
+export default startGame;

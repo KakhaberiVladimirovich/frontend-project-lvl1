@@ -1,12 +1,12 @@
-import basisOfGames from '../index.js';
+import getBasisOfGames from '../index.js';
 import getRandomIn from '../random.js';
 
 // noteToGameCalc(Вопрос задачи),  taskCalc(вопрос, Решение)(решение задачи), Random1/Random2
 
-const calculator = () => {
+const startGame = () => {
   const noteToGame = 'What is the result of the expression?';
 
-  const taskcalc = () => {
+  const getTaskcalc = () => {
     const random1 = getRandomIn(10);
     const random2 = getRandomIn(10);
 
@@ -31,7 +31,7 @@ const calculator = () => {
     }
     return [expression, result];
   };
-  basisOfGames(noteToGame, taskcalc);
+  getBasisOfGames(noteToGame, getTaskcalc);
 };
 
-export default calculator;
+export default startGame;
