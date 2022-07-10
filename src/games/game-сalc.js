@@ -1,12 +1,12 @@
-import getBasisOfGames from '../index.js';
-import getRandomIn from '../random.js';
+import play from '../index.js';
+import getRandomIn from '../helpers.js';
 
 // noteToGameCalc(Вопрос задачи),  taskCalc(вопрос, Решение)(решение задачи), Random1/Random2
 
 const startGame = () => {
-  const noteToGame = 'What is the result of the expression?';
+  const description = 'What is the result of the expression?';
 
-  const getTaskcalc = () => {
+  const getGenerateRound = () => {
     const random1 = getRandomIn(10);
     const random2 = getRandomIn(10);
 
@@ -29,9 +29,10 @@ const startGame = () => {
       default:
         result = null;
     }
-    return [expression, result];
+    const resultString = result.toString();
+    return [expression, resultString];
   };
-  getBasisOfGames(noteToGame, getTaskcalc);
+  play(description, getGenerateRound);
 };
 
 export default startGame;

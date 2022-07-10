@@ -1,32 +1,28 @@
 import readlineSync from 'readline-sync';
 
-const getBasisOfGames = (noteToGame, task) => {
+const play = (description, generateRound) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  // задача игры
-  console.log(noteToGame);
-
-  // Общий цикл включающий в себя 3 игры
-  for (let i = 0; i < 3; i += 1) {
-    const pairOfQuestionAndResult = task();
-    console.log('Question:', pairOfQuestionAndResult[0]);
+  console.log(description);
+  const numberOfRounds = 3;
+  for (let i = 0; i < numberOfRounds; i += 1) {
+    const [Question, Result] = generateRound();
+    console.log('Question:', Question);
     const answerUser = readlineSync.question('Your answer: ');
 
-    // Правильный ответ
-    const rightAnswer = pairOfQuestionAndResult[1].toString();
+    const rightAnswer = Result;
 
-    // Проверка
+    if (answerUser !== rightAnswer) {
+      return console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${userName}!`);
+    }
     if (answerUser === rightAnswer) {
       console.log('Correct!');
-    } else {
-      console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${userName}!`);
-      return;
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  return console.log(`Congratulations, ${userName}!`);
 };
 
-export default getBasisOfGames;
+export default play;

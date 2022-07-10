@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { getGreeting, startGame } from '../src/even.js';
+import yesAndNo from '../src/games/game-even.js';
 
-getGreeting();
-startGame();
+yesAndNo();

@@ -1,8 +1,8 @@
-import getBasisOfGames from '../index.js';
-import getRandomIn from '../random.js';
+import play from '../index.js';
+import getRandomIn from '../helpers.js';
 
-const getTaskcalc = (randomNamber1, randomNamber2) => {
-  let resultS = '';
+const getGenerateRound = (randomNamber1, randomNamber2) => {
+  let algebraicFormula = '';
   let rand1 = randomNamber1;
   let rand2 = randomNamber2;
 
@@ -13,21 +13,22 @@ const getTaskcalc = (randomNamber1, randomNamber2) => {
       rand2 -= rand1;
     }
   }
-  resultS = rand1;
-  return resultS;
+  algebraicFormula = rand1;
+  return algebraicFormula;
 };
 
 const startGame = () => {
-  const noteToGame = 'Find the greatest common divisor of given numbers.';
+  const description = 'Find the greatest common divisor of given numbers.';
 
   const substituteARandomNumber = () => {
     const random1 = getRandomIn(100);
     const random2 = getRandomIn(100);
     const expression = `${random1} ${random2}`;
-    const result = getTaskcalc(random1, random2);
-    return [expression, result];
+    const result = getGenerateRound(random1, random2);
+    const resultString = result.toString();
+    return [expression, resultString];
   };
-  getBasisOfGames(noteToGame, substituteARandomNumber);
+  play(description, substituteARandomNumber);
 };
 
 export default startGame;

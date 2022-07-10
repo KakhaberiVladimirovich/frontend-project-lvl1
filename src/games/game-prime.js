@@ -1,7 +1,7 @@
-import getBasisOfGames from '../index.js';
-import getRandomIn from '../random.js';
+import play from '../index.js';
+import getRandomIn from '../helpers.js';
 
-const getTaskcalc = (random) => {
+const getGenerateRound = (random) => {
   let rool = true;
   if (random === 0 || random === 1) {
     rool = false;
@@ -18,20 +18,21 @@ const getTaskcalc = (random) => {
   return rool;
 };
 const startGame = () => {
-  const noteToGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const substituteARandomNumber = () => {
     const randomnumber = getRandomIn(10);
 
     let result = '';
-    if (getTaskcalc(randomnumber) === true) {
+    if (getGenerateRound(randomnumber) === true) {
       result = 'yes';
     } else {
       result = 'no';
     }
-    return [randomnumber, result];
+    const resultString = result.toString();
+    return [randomnumber, resultString];
   };
-  getBasisOfGames(noteToGame, substituteARandomNumber);
+  play(description, substituteARandomNumber);
 };
 
 export default startGame;
