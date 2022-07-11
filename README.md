@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Kachabery/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Kachabery/frontend-project-lvl1/actions)
+[![hexlet-check](https://github.com/Kachabery/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Kachabery/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
+[![Linter](https://github.com/Kachabery/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)](https://github.com/Kachabery/frontend-project-lvl1/actions/workflows/linter.yml)
 <a href="https://codeclimate.com/github/Kachabery/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/7c1a84c6c911e949c857/maintainability" /></a>
 
 ## О проекте	
