@@ -1,7 +1,7 @@
 import play from '../index.js';
 import getRandomIn from '../helpers.js';
 
-const yesAndNo = () => {
+const startGame = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const getGenerateRound = () => {
@@ -24,4 +24,4 @@ const yesAndNo = () => {
   play(description, getGenerateRound);
 };
 
-export default yesAndNo;
+export default startGame;

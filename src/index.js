@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const roundsCount = 3;
+
 const play = (description, generateRound) => {
   console.log('Welcome to the Brain Games!');
 
@@ -7,22 +9,29 @@ const play = (description, generateRound) => {
   console.log(`Hello, ${userName}!`);
 
   console.log(description);
-  const numberOfRounds = 3;
-  for (let i = 0; i < numberOfRounds; i += 1) {
-    const [Question, Result] = generateRound();
-    console.log('Question:', Question);
-    const answerUser = readlineSync.question('Your answer: ');
 
-    const rightAnswer = Result;
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, answer] = generateRound();
+    console.log('Question:', question);
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    if (answerUser !== rightAnswer) {
-      return console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${userName}!`);
+    if (userAnswer !== answer) {
+      const showError = () => {
+        console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
+        console.log(`Let's try again, ${userName}!`);
+      };
+      return showError();
     }
-    if (answerUser === rightAnswer) {
-      console.log('Correct!');
-    }
+    console.log('Correct!');
   }
-  return console.log(`Congratulations, ${userName}!`);
+
+  const finish = console.log(`Congratulations, ${userName}!`);
+  /**  Возвращал console.log совместно с return из-за того что выскакивала ошибка линтера -
+   * - ( стрелочная функция ожидает возврат значения в конце (return)).
+   * Написать console.log и вернуть после этого return -
+   * - появляется другая ошибка (return без значения)
+   * */
+  return finish;
 };
 
 export default play;

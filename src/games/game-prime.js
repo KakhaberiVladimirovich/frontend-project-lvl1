@@ -3,7 +3,7 @@ import getRandomIn from '../helpers.js';
 
 const getGenerateRound = (random) => {
   let rool = true;
-  if (random === 0 || random === 1) {
+  if (random < 2) {
     rool = false;
   } else if (random === 2) {
     rool = true;
