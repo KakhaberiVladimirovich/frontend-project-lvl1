@@ -3,7 +3,7 @@ import getRandomNumber from '../helpers.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const generateRound = (randomNumber1, randomNumber2) => {
+const substituteARandomNumber = (randomNumber1, randomNumber2) => {
   let algebraicFormula = '';
   let number1 = randomNumber1;
   let number2 = randomNumber2;
@@ -19,16 +19,17 @@ const generateRound = (randomNumber1, randomNumber2) => {
   return algebraicFormula;
 };
 
+const generateRound = () => {
+  const number1 = getRandomNumber(0, 100);
+  const number2 = getRandomNumber(0, 100);
+  const expression = `${number1} ${number2}`;
+  const result = substituteARandomNumber(number1, number2);
+  const resultString = result.toString();
+  return [expression, resultString];
+};
+
 const startGame = () => {
-  const substituteARandomNumber = () => {
-    const number1 = getRandomNumber(0, 100);
-    const number2 = getRandomNumber(0, 100);
-    const expression = `${number1} ${number2}`;
-    const result = generateRound(number1, number2);
-    const resultString = result.toString();
-    return [expression, resultString];
-  };
-  start(description, substituteARandomNumber);
+  start(description, generateRound);
 };
 
 export default startGame;
