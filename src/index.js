@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
 
-const play = (description, generateRound) => {
+const start = (description, generateRound) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name? ');
@@ -16,22 +16,14 @@ const play = (description, generateRound) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== answer) {
-      const showError = () => {
-        console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
-        console.log(`Let's try again, ${userName}!`);
-      };
-      return showError();
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
     console.log('Correct!');
   }
 
-  const finish = console.log(`Congratulations, ${userName}!`);
-  /**  Возвращал console.log совместно с return из-за того что выскакивала ошибка линтера -
-   * - ( стрелочная функция ожидает возврат значения в конце (return)).
-   * Написать console.log и вернуть после этого return -
-   * - появляется другая ошибка (return без значения)
-   * */
-  return finish;
+  console.log(`Congratulations, ${userName}!`);
 };
 
-export default play;
+export default start;
