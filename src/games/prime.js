@@ -3,7 +3,7 @@ import getRandomNumber from '../helpers.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const substituteARandomNumber = (number) => {
+const isPrime = (number) => {
   let result = true;
   if (number < 2) {
     result = false;
@@ -21,11 +21,11 @@ const substituteARandomNumber = (number) => {
 };
 
 const generateRound = () => {
-  const randomnumber = getRandomNumber(0, 10);
+  const question = getRandomNumber(0, 10);
 
-  const result = substituteARandomNumber(randomnumber) ? 'yes' : 'no';
+  const answer = isPrime(question) ? 'yes' : 'no';
 
-  return [randomnumber, result];
+  return [question, answer];
 };
 
 const startGame = () => {
