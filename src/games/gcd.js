@@ -7,7 +7,7 @@ const getGCD = (randomNumber1, randomNumber2) => {
   if (randomNumber1 !== 0) {
     getGCD(randomNumber2 % randomNumber1);
   }
-  return randomNumber2;
+  return randomNumber2.toString();
 };
 
 const generateRound = () => {
