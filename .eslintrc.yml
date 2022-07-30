@@ -1,5 +1,4 @@
 env:
-  browser: true
   es2021: true
 extends:
   - airbnb-base
@@ -12,6 +11,3 @@ rules:
     - error
     - ignorePackages
     - js: always
-
-
-

@@ -3,8 +3,8 @@ import getRandomNumber from '../helpers.js';
 
 const description = 'What is the result of the expression?';
 
-const calculate = (randomOperand, number1, number2) => {
-  switch (randomOperand) {
+const calculate = (operand, number1, number2) => {
+  switch (operand) {
     case '-':
       return number1 - number2;
     case '+':
@@ -12,7 +12,7 @@ const calculate = (randomOperand, number1, number2) => {
     case '*':
       return number1 * number2;
     default:
-      throw new Error(`unknown operand state: '${randomOperand}'!`);
+      throw new Error(`unknown operand state: '${operand}'!`);
   }
 };
 
@@ -20,7 +20,7 @@ const generateRound = () => {
   const operators = ['-', '+', '*'];
   const number1 = getRandomNumber(0, 10);
   const number2 = getRandomNumber(0, 10);
-  const operandNumber = getRandomNumber(0, (operators.length - 1));
+  const operandNumber = getRandomNumber(0, operators.length - 1);
 
   const randomOperand = operators[operandNumber];
 
