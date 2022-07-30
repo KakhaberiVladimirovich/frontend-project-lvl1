@@ -4,19 +4,10 @@ import getRandomNumber from '../helpers.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (randomNumber1, randomNumber2) => {
-  let algebraicFormula = '';
-  let number1 = randomNumber1;
-  let number2 = randomNumber2;
-
-  while (number1 !== number2) {
-    if (number1 > number2) {
-      number1 -= number2;
-    } else {
-      number2 -= number1;
-    }
+  if (randomNumber1 !== 0) {
+    getGCD(randomNumber2 % randomNumber1);
   }
-  algebraicFormula = number1;
-  return algebraicFormula;
+  return randomNumber2;
 };
 
 const generateRound = () => {
