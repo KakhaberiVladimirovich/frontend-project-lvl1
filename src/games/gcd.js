@@ -3,13 +3,13 @@ import getRandomNumber from '../helpers.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const nod = (number1, number2) => (number1 !== 0 ? nod(number2 % number1, number1) : number2);
+const getGCD = (num1, num2) => (num1 !== 0 ? getGCD(num2 % num1, num1) : num2);
 
 const generateRound = () => {
   const number1 = getRandomNumber(0, 100);
   const number2 = getRandomNumber(0, 100);
   const question = `${number1} ${number2}`;
-  const result = nod(number1, number2);
+  const result = getGCD(number1, number2);
   const answer = result.toString();
   return [question, answer];
 };
