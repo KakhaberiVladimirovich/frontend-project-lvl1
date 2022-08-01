@@ -14,15 +14,14 @@ const getProgression = (startingNumber, step, length) => {
 
 const generateRound = () => {
   const startingNumber = getRandomNumber(0, 10);
-  const step = getRandomNumber(0, 10);
+  const progressionStep = getRandomNumber(0, 10);
   const progressionLength = 10;
 
-  const progression = getProgression(startingNumber, step, progressionLength);
-  const randomIndex = getRandomNumber(0, step - 1);
+  const progression = getProgression(startingNumber, progressionStep, progressionLength);
+  const randomIndex = getRandomNumber(0, progressionStep - 1);
   const answer = progression[randomIndex].toString();
-  const question = progression;
-  question[randomIndex] = '..';
-  return [question.join(' '), answer];
+  progression[randomIndex] = '..';
+  return [progression.join(' '), answer];
 };
 
 const startGame = () => {
